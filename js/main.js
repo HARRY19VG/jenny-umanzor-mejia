@@ -40,6 +40,16 @@ window.addEventListener('load', function(){
     $('body').removeClass('hidden');
     menus();
 });
+$("#idturismo").click(function(){
+            delete sessionStorage.modificar_retorno;
+            $.ajax({
+                url:   '../carreras/lic_turismo.html',
+                success:  function (response) {
+                    // document.location.href= '../htmlm/modify_usuario.php?id='+id;
+                    document.location.href = "../carreras/lic_turismo.html";
+                }
+            });
+        });
 window.addEventListener('click',function(e){
     console.log(e.target);
     if(cerrado==false){
